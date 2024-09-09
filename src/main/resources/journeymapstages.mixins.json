@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.sdm.journeymapstages.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "journeymapstages.refmap.json",
+  "mixins": [
+    "MiniMapMixin"
+  ],
+  "client": [
+    "MinecraftMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

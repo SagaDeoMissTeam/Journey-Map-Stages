@@ -34,6 +34,11 @@ public class JourneyStageAction implements IRuntimeAction {
         return String.format("Restricting Journey Map %s stage to %s.",this.type.name().toLowerCase(),this.stage);
     }
 
+    @Override
+    public String systemName() {
+        return "Journey Stage";
+    }
+
     public enum Type {
         FULLSCREEN,
         MINIMAP,

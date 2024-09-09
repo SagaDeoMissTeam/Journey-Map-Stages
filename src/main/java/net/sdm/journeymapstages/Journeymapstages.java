@@ -27,7 +27,7 @@ public class Journeymapstages {
 
     @SubscribeEvent
     public void tick(TickEvent.PlayerTickEvent event){
-        if(event.player.level.isClientSide && event.player.level.getGameTime() % 20 == 0){
+        if(event.player.level().isClientSide && event.player.level().getGameTime() % 20 == 0){
             Player player = event.player;
             if(noHasStage(player, wayPoints)) {
                 for (Waypoint waypoint : WaypointStore.INSTANCE.getAll()) {

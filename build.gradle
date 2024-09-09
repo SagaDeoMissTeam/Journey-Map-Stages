@@ -2,10 +2,12 @@ buildscript {
     repositories {
         // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+        maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
     }
     dependencies {
         classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
 
@@ -25,7 +27,7 @@ base {
 }
 
 java {
-    toolchain.languageVersion = JavaLanguageVersion.of(8)
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 
 minecraft {
@@ -132,10 +134,10 @@ dependencies {
     // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    implementation fg.deobf("curse.maven:journeymap-32274:5546771")
-    implementation fg.deobf("curse.maven:game-stages-268655:3732279")
-    implementation fg.deobf("curse.maven:bookshelf-228525:4351252")
-    implementation fg.deobf("curse.maven:crafttweaker-239197:5007325")
+    implementation fg.deobf("curse.maven:journeymap-32274:5208370")
+    implementation fg.deobf("curse.maven:game-stages-268655:4066389")
+    implementation fg.deobf("curse.maven:bookshelf-228525:4556713")
+    implementation fg.deobf("curse.maven:crafttweaker-239197:4886430")
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")

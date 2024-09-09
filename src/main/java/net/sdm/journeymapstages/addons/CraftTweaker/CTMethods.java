@@ -2,7 +2,7 @@ package net.sdm.journeymapstages.addons.CraftTweaker;
 
 
 import com.blamejared.crafttweaker.api.CraftTweakerAPI;
-import com.blamejared.crafttweaker.api.annotations.ZenRegister;
+import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import org.openzen.zencode.java.ZenCodeType;
 
 @ZenRegister

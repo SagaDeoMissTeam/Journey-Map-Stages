@@ -5,7 +5,7 @@ import journeymap.client.ui.waypoint.WaypointEditor;
 import journeymap.client.ui.waypoint.WaypointManager;
 import net.darkhax.gamestages.GameStageHelper;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.screens.Screen;
 import net.sdm.journeymapstages.Journeymapstages;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

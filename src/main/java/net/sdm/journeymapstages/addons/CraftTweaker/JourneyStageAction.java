@@ -1,6 +1,6 @@
 package net.sdm.journeymapstages.addons.CraftTweaker;
 
-import com.blamejared.crafttweaker.api.actions.IRuntimeAction;
+import com.blamejared.crafttweaker.api.action.base.IRuntimeAction;
 import net.sdm.journeymapstages.Journeymapstages;
 
 public class JourneyStageAction implements IRuntimeAction {

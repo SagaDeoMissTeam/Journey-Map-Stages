@@ -1,7 +1,7 @@
 package net.sdm.journeymapstages;
 
-import journeymap.client.waypoint.Waypoint;
-import journeymap.client.waypoint.WaypointStore;
+import journeymap.client.waypoint.ClientWaypointImpl;
+import journeymap.common.waypoint.WaypointStore;
 import net.darkhax.gamestages.GameStageHelper;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,18 +30,18 @@ public class Journeymapstages {
         if(event.player.level().isClientSide && event.player.level().getGameTime() % 20 == 0){
             Player player = event.player;
             if(noHasStage(player, wayPoints)) {
-                for (Waypoint waypoint : WaypointStore.INSTANCE.getAll()) {
+                for (ClientWaypointImpl waypoint : WaypointStore.getInstance().getAll()) {
                     if(!waypoint.isDeathPoint()){
-                        waypoint.setEnable(false);
-                        waypoint.setDirty();
+                        waypoint.setEnabled(false);
+                        waypoint.setDirty(true);
                     }
                 }
             }
             if(noHasStage(player, deadPoints)) {
-                for (Waypoint waypoint : WaypointStore.INSTANCE.getAll()) {
+                for (ClientWaypointImpl waypoint : WaypointStore.getInstance().getAll()) {
                     if(waypoint.isDeathPoint()){
-                        waypoint.setEnable(false);
-                        waypoint.setDirty();
+                        waypoint.setEnabled(false);
+                        waypoint.setDirty(true);
                     }
                 }
             }

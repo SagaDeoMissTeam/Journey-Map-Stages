@@ -1,9 +1,8 @@
 package net.sdm.journeymapstages.mixin;
 
 import journeymap.client.ui.fullscreen.Fullscreen;
-import journeymap.client.ui.waypoint.WaypointEditor;
-import journeymap.client.ui.waypoint.WaypointManager;
-import net.darkhax.gamestages.GameStageHelper;
+import journeymap.client.ui.waypointmanager.WaypointManager;
+import journeymap.client.ui.waypointmanager.waypoint.WaypointEditor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.sdm.journeymapstages.Journeymapstages;
